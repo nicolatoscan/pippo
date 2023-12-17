@@ -13,7 +13,7 @@
         <h2>Let's accelerate the development of autonomous vehicles</h2>
     </div>
 
-    <video id="myVideo" class="hide" src="../images/video.mp4" controls="true"></video>
+    <video id="myVideo" class="hide" src="./images/video.mp4" controls="true"></video>
 
     <div class="action">
         <button on:click={parti} >Book Now</button>
@@ -57,6 +57,10 @@
             font-size: 6rem;
         }
 
+        .action {
+            position: absolute;
+            bottom: 10vh;
+        }
         button {
             background-color: #f60;
             border: none;
@@ -66,6 +70,7 @@
             font-size: 1.5rem;
             cursor: pointer;
             transition: all 0.2s ease-in-out;
+
             &:hover {
                 background-color: #f90;
             }
