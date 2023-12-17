@@ -7,16 +7,25 @@
 	}
 </script>
 
-<div class="header">
-    <div class="title">
-        <h1> <span class="black">Car<span class="orange">Hub</span></span></h1>
-        <h2>Let's accelerate the development of autonomous vehicles</h2>
+<div>
+    <div class="header block">
+        <div class="title-box">
+            <h1> <span class="black">Car<span class="orange">Hub</span></span></h1>
+            <h2>Let's accelerate the development of autonomous vehicles</h2>
+        </div>
+        
+        <video id="myVideo" class="hide" src="./images/video.mp4" controls="true"></video>
+        
+        <div class="action">
+            <button on:click={parti} >Book Now</button>
+        </div>
     </div>
 
-    <video id="myVideo" class="hide" src="./images/video.mp4" controls="true"></video>
-
-    <div class="action">
-        <button on:click={parti} >Book Now</button>
+    <div class="block due">
+        <div class="title-box">
+            <p class="title">Schedule a test today</p>
+            <p class="text">Drive your car in the best automated rotonde in the market</p>
+        </div>
     </div>
 </div>
 
@@ -24,8 +33,22 @@
     .hide {
         display: none;
     }
-    .header {
-        background-image: url(../images/header.jpeg);
+    .block {
+        &.header {
+            background-image: url(../images/header.jpeg);
+            background-attachment: fixed;
+        }
+        &.due {
+            background-image: url(../images/due.jpeg);
+            align-items: flex-end;
+
+            .title-box {
+                color: white;
+                text-align: right;
+                margin-right: 3rem;
+                
+            }
+        }
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -34,9 +57,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-attachment: fixed;
 
-        .title {
+        .title-box {
             display: flex;
             flex-direction: column;
             justify-content: center;
